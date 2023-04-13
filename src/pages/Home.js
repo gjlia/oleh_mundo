@@ -1,11 +1,13 @@
 import { React } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-const Home = () => {
+const Home = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.barbie}>Barbie is everything. / Barbie é tudo.</Text>
             <Text style={styles.ken}>He's just Ken. / Ele é Ken?</Text>
+            <Text style={styles.espaco}>It's Hidden</Text>
+            <Button title="Next" onPress={() => navigation.navigate('Rest')}/>
         </View>
     );
 }
@@ -28,6 +30,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#00bfff',
     padding: 5,
     borderRadius: 5,
+  },
+  espaco: {
+    color: '#ffc0cb',
   }
 });
 
