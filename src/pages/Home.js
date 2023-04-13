@@ -1,15 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
+import { React } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>BARBIE - Julho nos Cinemas</Text>
-      <Text style={styles.barbie}>Barbie is everything. / Barbie é tudo.</Text>
-      <Text style={styles.ken}>He's just Ken. / Ele é Ken?</Text>
-      <StatusBar style="auto"/>
-    </View>
-  );
+const Home = () => {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.barbie}>Barbie is everything. / Barbie é tudo.</Text>
+            <Text style={styles.ken}>He's just Ken. / Ele é Ken?</Text>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
@@ -30,11 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00bfff',
     padding: 5,
     borderRadius: 5,
-  },
-  title: {
-    color: '#fff',
-    backgroundColor: '#ff69b4',
-    padding: 5,
-    borderRadius: 5,
   }
 });
+
+export default Home;

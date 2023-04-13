@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 //paginas
@@ -7,38 +7,11 @@ import Rest from './src/pages/rest';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>BARBIE - Julho nos Cinemas</Text>
-      <Text style={styles.barbie}>Barbie is everything. / Barbie é tudo.</Text>
-      <Text style={styles.ken}>He's just Ken. / Ele é Ken?</Text>
-      <StatusBar style="auto"/>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home}/>
+          <Stack.Screen name="Rest" component={Rest}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffc0cb',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  barbie: {
-    color: '#fff',
-    backgroundColor: '#ff007f',
-    padding: 5,
-    borderRadius: 5,
-  },
-  ken: {
-    color: '#fff',
-    backgroundColor: '#00bfff',
-    padding: 5,
-    borderRadius: 5,
-  },
-  title: {
-    color: '#fff',
-    backgroundColor: '#ff69b4',
-    padding: 5,
-    borderRadius: 5,
-  }
-});
