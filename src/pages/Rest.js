@@ -6,7 +6,7 @@ const Rest = ({ navigation }) => {
         <View style={styles.container}>
             <Text style={styles.title}>BARBIE - Julho nos Cinemas</Text>
             <Text style={styles.espaco}>It's Hidden</Text>
-            <Button title="Previous" onPress={() => navigation.navigate('Home')}/>
+            <Button title="Previous" onPress={() => navigation.goBack()}/>
         </View>
     );
 }
