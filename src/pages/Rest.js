@@ -12,7 +12,7 @@ const Rest = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffc0cb',
     alignItems: 'center',
     justifyContent: 'center',
   },
